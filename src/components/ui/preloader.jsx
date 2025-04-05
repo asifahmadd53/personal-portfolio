@@ -59,19 +59,18 @@ const Preloader = () => {
         <motion.div className="load-text" animate={textControls} initial={{ opacity: 0, y: 10 }}>
           {["M", "u", "h", "a", "m", "m", "a", "d", " ", "A", "s", "i", "f"].map((char, index) => (
             <motion.span
-            key={index}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}  // Just fade in without bouncing
-            transition={{ delay: index * 0.08, duration: 0.6 }}
-            style={{
-              fontSize: "1.7rem", // Increased text size
-              fontWeight: "500", // Semi-Bold text for prominence
-              color: "#fff", // White text color for contrast (can be changed)
-            }}
-          >
-            {char}
-          </motion.span>
-          
+              key={index}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}  // Just fade in without bouncing
+              transition={{ delay: index * 0.08, duration: 0.6 }}
+              style={{
+                fontSize: "1.9vw", // Increased text size
+                fontWeight: "500", // Bold text for prominence
+                color: "#fff", // White text color for contrast (can be changed)
+              }}
+            >
+              {char}
+            </motion.span>
           ))}
         </motion.div>
       </div>
