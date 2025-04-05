@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { RiArrowRightUpLine } from '@remixicon/react'
 import { projectsData } from '../../utlits/fackData/projectData'
 import SlideUp from '../../utlits/animations/slideUp';
+
 
 const animations = ['slideIn', 'fadeIn', 'scaleUp'];
 
@@ -22,15 +23,28 @@ const Portfolio = ({ className }) => {
     }
 
     // ------ filter unique category
-    const filteredCategory = ["All"]
-    projectsData.forEach(({ category }) => {
-        if (!filteredCategory.includes(category)) {
-            filteredCategory.push(category)
-        }
-    })
-    // ------ filter unique category
+   // ------ filter unique category
+const filteredCategory = ["All"];
+projectsData.forEach(({ category }) => {
+    if (Array.isArray(category)) {
+        category.forEach(cat => {
+            if (!filteredCategory.includes(cat)) {
+                filteredCategory.push(cat);
+            }
+        });
+    } else if (!filteredCategory.includes(category)) {
+        filteredCategory.push(category);
+    }
+});
+// ------ filter unique category
 
-    const filteredProjects = category === 'All' ? projectsData : projectsData.filter(image => image.category === category);
+const filteredProjects = category === 'All' 
+    ? projectsData 
+    : projectsData.filter(project => 
+        Array.isArray(project.category) 
+            ? project.category.includes(category) 
+            : project.category === category
+    );
 
 
     return (
@@ -42,8 +56,8 @@ const Portfolio = ({ className }) => {
                             <SlideUp>
                                 <div className="section-title text-center">
                                     <h2>Works & Projects</h2>
-                                    <p>Check out some of my design projects, meticulously crafted with love and dedication,
-                                        each one reflecting the passion and soul I poured into every detail.</p>
+                                    <p>Explore my collection of full-stack projects, built with modern web technologies like React, Node.js, and MongoDB. Each project demonstrates my focus on responsive design, functionality, and clean user experience.</p>
+
                                 </div>
                             </SlideUp>
                         </div>
@@ -54,7 +68,7 @@ const Portfolio = ({ className }) => {
                         </ul>
                     </SlideUp>
                     <div className="row project-masonry-active overflow-hidden">
-                        {filteredProjects.map(({ category, id, src, title }) => <Card key={id} id={id} category={category} src={src} title={title} animationClass={animationClass} />)}
+                        {filteredProjects.map(({ category, id, src, title,link }) => <Card key={id} id={id} category={category} link={link} src={src} title={title} animationClass={animationClass} />)}
 
                     </div>
                 </div>
@@ -66,14 +80,14 @@ const Portfolio = ({ className }) => {
 export default Portfolio
 
 
-const Card = ({ category, title, src, animationClass, id }) => {
+const Card = ({ category, title, src, animationClass, id,link }) => {
     return (
         <div className={`col-lg-4 col-md-6 item branding game ${animationClass}`}>
             <SlideUp delay={id}>
                 <div className="project-item style-two">
                     <div className="project-image">
                         <img src={src} alt="Project" />
-                        <Link to="/single-project" className="details-btn"><RiArrowRightUpLine /> </Link>
+                        <Link target='_blank' to={link} className="details-btn"><RiArrowRightUpLine /> </Link>
                     </div>
                     <div className="project-content">
                         <span className="sub-title">{category}</span>

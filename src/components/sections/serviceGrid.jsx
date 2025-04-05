@@ -1,5 +1,5 @@
-import { RiGlobalFill, RiPantoneFill, RiQuillPenLine } from '@remixicon/react'
-import React from 'react'
+import { RiGlobalFill, RiPantoneFill } from '@remixicon/react'
+import { HiOutlineDevicePhoneMobile } from "react-icons/hi2";
 import SlideUp from '../../utlits/animations/slideUp'
 
 const ServiceGrid = () => {
@@ -18,9 +18,9 @@ const ServiceGrid = () => {
                         </div>
                     </div>
                     <div className="row">
-                        <Card id={1} icon={<RiGlobalFill size={60} />} title={"Brand Identity Design"} description={"Bentos gives you the blocks & kits you need to create a true website within minutes."} />
-                        <Card id={2} icon={<RiQuillPenLine size={60} />} title={"Website Design"} description={"Bentos gives you the blocks & kits you need to create a true website within minutes."} />
-                        <Card id={3} icon={<RiPantoneFill size={60} />} title={"Application Design"} description={"Bentos gives you the blocks & kits you need to create a true website within minutes."} />
+                        <Card id={1} icon={<RiGlobalFill size={60} />} title={"Web Development"} description={"Building responsive, user-centric websites using the latest technologies and best practices."} />
+                        <Card id={2} icon={<HiOutlineDevicePhoneMobile size={60} />} title={"App Development"} description={"Specializing in building scalable and efficient mobile applications using modern frameworks."} />
+                        <Card id={3} icon={<RiPantoneFill size={60} />} title={"MERN Stack Development"} description={"Expert in MERN stack, crafting full-stack solutions with a focus on performance and scalability."} />
                     </div>
                 </div>
             </div>

@@ -12,49 +12,57 @@ export const projectsData = [
         id: 1,
         src: bytvance,
         category: "MERN",
-        title: "Mobile Application Design",
+        title: "MERN Stack Blog Application",
+        link:"https://bytvance.vercel.app/"
     },
     {
         id: 2,
         src: abita,
         category: "React",
-        title: "Website Makeup Design",
+        title: "React se bni hui hai ",
+        link:"https://abita.vercel.app/"
     },
     {
         id: 3,
         src: hoobank,
-        category: "Landing page",
+        category: ["React","Landing Page"],
         title: "Brand Identity and Motion Design",
+        link:"https://hoobank.vercel.app/"
     },
     {
         id: 4,
         src: mysticove,
-        category: "Marketing",
+        category: ["React","Landing Page"],
         title: "Mobile Application Design",
+        link:"https://mysticove.netlify.app/"
     },
     {
         id: 5,
         src: passwordgenerator,
-        category: "Design",
+        category: ["React","Smart Utilities"],
         title: "Brand Identity and Motion Design",
+        link:"https://passavo.netlify.app/"
     },
     {
         id: 6,
         src: Stopwatch,
-        category: "Marketing",
-        title: "Brand Identity and Motion Design"
+        category: "Smart Utilities",
+        title: "Brand Identity and Motion Design",
+        link:"https://asifahmadd53.github.io/Stopwatch/"
     },
     {
         id: 7,
         src: weatherapp,
-        category: "Marketing",
-        title: "Brand Identity and Motion Design"
+        category: "Smart Utilities",
+        title: "Brand Identity and Motion Design",
+        link:"https://asifahmadd53.github.io/weather-app/"
     },
     {
         id: 8,
         src: stats,
-        category: "Marketing",
-        title: "Brand Identity and Motion Design"
+        category: "Landing Page",
+        title: "Brand Identity and Motion Design",
+        link:"https://asifahmadd53.github.io/market-strategies/"
     },
 
 ]

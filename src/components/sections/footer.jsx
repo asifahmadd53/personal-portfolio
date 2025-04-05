@@ -11,15 +11,15 @@ const Footer = () => {
                         <div className="col-lg-6">
                             <div className="copyright-text">
                                 <p>
-                                    Copyright @{year}, <Link to="/">Bentos</Link> All
+                                    Copyright @{year}, <Link to="/">Muhammad Asif</Link> All
                                     Rights Reserved.
                                 </p>
                             </div>
                         </div>
                         <div className="col-lg-6">
                             <div className="copyright-text extra-copyright">
-                                <p>
-                                    Crafted with ❤️ theme_ocean
+                            <p>
+                                    Built with ❤️ by Muhammad Asif
                                 </p>
                             </div>
                         </div>

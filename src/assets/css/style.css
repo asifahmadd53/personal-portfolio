@@ -33,7 +33,23 @@ Version      : 1.0
 * 01.GLOBAL STYLE
 * ----------------------------------------------------------------------------------------
 */
+
+
 :root {
+    --main-color: #444;
+    --heading-color: #000;
+    --primary-color: #448C74;
+    --lighter-color: #444;
+    --subtitle-color: #444;
+    --black-color: #000;
+    --border-color: rgba(119, 119, 125, 0.2);
+    --button-border: rgba(119, 119, 125, 0.2);
+    --body-background: #ECF3F1;
+    --grey-bg: #E6EAEE;
+    --container-bg: #ffffff;
+    --button-hover-color: #000;
+  }
+  .dark-theme {
     --main-color: #9f9f9f;
     --heading-color: #fff;
     --primary-color: #eb5d3a;
@@ -44,7 +60,10 @@ Version      : 1.0
     --button-border: rgba(119, 119, 125, .2);
     --body-background: #000;
     --grey-bg: #E6EAEE;
+    --container-bg: #121214;
+    --button-hover-color: #fff; 
 }
+
 
 * {
     margin: 0;
@@ -62,7 +81,6 @@ body {
     font-size: 16px;
     font-family: "Poppins", sans-serif;
     overflow-x: hidden;
-
 }
 
 
@@ -437,13 +455,23 @@ html {
     -webkit-transition: .3s;
     transition: .3s
 }
+.menu-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* space between button and toggle */
+    flex-wrap: wrap; /* optional: makes it responsive on small screens */
+  }
+  
 
 .menu-btns a.theme-btn {
     background: transparent;
+    color: var(--heading-color);
 }
 
 .menu-btns a.theme-btn:hover {
     background: var(--primary-color);
+    color: var(--body-background);
 }
 
 .theme-btn:focus {
@@ -459,7 +487,7 @@ html {
 .theme-btn:hover {
     border: 1px solid var(--button-border);
     text-decoration: none;
-    color: #fff;
+    color: var(--button-hover-color);
     -webkit-transition: .3s;
     transition: .3s;
     background: transparent;
@@ -1026,7 +1054,7 @@ html {
     font-weight: 500;
     position: relative;
     text-transform: capitalize;
-    color: rgb(206 206 206);
+    color: var(--heading-color);
     -webkit-transition: all 500ms ease;
     transition: all 500ms ease;
 }
@@ -1257,7 +1285,8 @@ html {
     border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 20px;
     box-shadow: rgba(255, 255, 255, 0.025) 0px 0.362176px 0.651917px -1px inset, rgba(255, 255, 255, 0.036) 0px 3px 5.4px -2px inset;
-    background-color: #121214;
+    background-color: var(--container-bg);
+    
 }
 
 .about-content-part {}
@@ -1268,7 +1297,7 @@ html {
     border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 20px;
     box-shadow: rgba(255, 255, 255, 0.025) 0px 0.362176px 0.651917px -1px inset, rgba(255, 255, 255, 0.036) 0px 3px 5.4px -2px inset;
-    background-color: #121214;
+    background-color: var(--container-bg);
 }
 
 .about-content-part,
@@ -1277,7 +1306,7 @@ html {
     border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 20px;
     box-shadow: rgba(255, 255, 255, 0.025) 0px 0.362176px 0.651917px -1px inset, rgba(255, 255, 255, 0.036) 0px 3px 5.4px -2px inset;
-    background-color: #121214;
+    background-color: var(--container-bg);
 }
 
 .about-content-part-bottom {
@@ -1289,7 +1318,11 @@ html {
 }
 
 .about-image-part img {
-    width: 300px;
+
+    border: 2px dashed var(--primary-color);
+	padding:10px;
+	border-radius: 50%;
+	margin-bottom: 30px;
 }
 
 .about-image-part h2 {
@@ -1305,8 +1338,9 @@ html {
 
 
 .about-content-part h2 span {
+    -webkit-text-stroke: 1px var(--heading-color);
+    color: transparent;
     padding: 0 20px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .adress-field ul li {}
@@ -1540,7 +1574,7 @@ html {
     font-size: 20px;
     font-weight: 600;
     font-family: "Poppins", sans-serif;
-    color: var(--black-color);
+    color: var(--heading-color);
 }
 
 .skill-item:hover {
@@ -1549,7 +1583,7 @@ html {
 
 .skill-item:hover .percent {
     color: var(--heading-color);
-    background: var(--black-color);
+    
 }
 
 .extra-skills {}
@@ -1586,7 +1620,7 @@ ul.extra-skills li i {
     border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 20px;
     box-shadow: rgba(255, 255, 255, 0.025) 0px 0.362176px 0.651917px -1px inset, rgba(255, 255, 255, 0.036) 0px 3px 5.4px -2px inset;
-    background-color: #121214;
+    background-color: var(--container-bg);
 }
 
 .experience-list {
@@ -1635,7 +1669,13 @@ ul.extra-skills li i {
 }
 
 .resume-item .content .company {
-    color: rgb(119, 119, 125);
+    color: rgb(190, 190, 190); /* Lighter color for company */
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.resume-item .content .description {
+    color: rgb(102, 102, 102); /* Lighter gray for description */
     font-size: 16px;
 }
 
@@ -2370,7 +2410,7 @@ ul.extra-skills li i {
     border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 20px;
     box-shadow: rgba(255, 255, 255, 0.025) 0px 0.362176px 0.651917px -1px inset, rgba(255, 255, 255, 0.036) 0px 3px 5.4px -2px inset;
-    background-color: #121214;
+    background-color: var(--container-bg);
 }
 .call-to-action-area {
     padding-top: 15px;

@@ -13,9 +13,33 @@ const Resume = () => {
                             <div className="single-resume">
                                 <h2>Experience</h2>
                                 <div className="experience-list">
-                                    <Card year={'2021 - Present'} title={'Web Designer'} institution={'Themeforest Market '} />
-                                    <Card year={'2021 - 2023'} title={'Marketing Expert GRP'} institution={'Envato Theme Developer'} />
-                                    <Card year={'2021 - 2022'} title={'Web Designer'} institution={'Web Developer & Business Partner'} />
+                                    <Card
+                                        year={'March 2023 - Jun 2023'}
+                                        title={'Java Basics & GUI Projects'}
+                                        institution={'COMSATS University Islamabad'}
+                                        description={'Exploring Java fundamentals and developing practical GUI-based projects to enhance problem-solving skills and programming expertise.'}
+                                    />
+
+                                    <Card
+                                        year={'Jun 2023 - Oct 2023'}
+                                        title={'Web Development'}
+                                        institution={'Self-Taught'}
+                                        description={'Learned HTML, CSS, and JavaScript to build interactive, responsive UIs. Then exploring SQL for dynamic web applications and database integration.'}
+                                    />
+                                    <Card
+                                        year={'Nov 2023 - Jan 2024'}
+                                        title={'Frontend Developer'}
+                                        institution={'Independent Development'}
+                                        description={'Built responsive projects with custom CSS and JavaScript, focusing on interactive components and cross-browser compatibility for a seamless user experience.'}
+                                    />
+
+                                    <Card
+                                        year={'2021 - 2022'}
+                                        title={'Backend Developer & MERN Stack'}
+                                        institution={'Developing Projects'}
+                                        description={'Started with backend development using Node.js and Express.js, then expanded into the MERN stack, building full-stack applications with MongoDB, Express, React, and Node.js.'}
+                                    />
+
                                 </div>
                             </div>
                         </div>
@@ -25,9 +49,27 @@ const Resume = () => {
                             <div className="experience-list">
                                 <div className="single-resume">
                                     <h2>Education</h2>
-                                    <Card year={'2013 - 2015'} title={'Bachelor Degree of Information Technology'} institution={'State University bangladesh'} />
-                                    <Card year={'2021 - 2024'} title={'Higher secoundery Education'} institution={'Premium College United VC'} />
-                                    <Card year={'2020 - 2021'} title={'UI/UX Design'} institution={'Webster College'} />
+                                    <Card
+                                        year={'2022 - 2026'}
+                                        title={'Bachelor of Science in Computer Science (BSCS)'}
+                                        institution={'COMSATS University Islamabad, Sahiwal Campus (Ongoing)'}
+                                        description={'Currently pursuing a BSCS degree, focusing on computer science fundamentals, software development, and emerging technologies.'}
+                                    />
+
+
+                                    <Card
+                                        year={'2023 - Present'}
+                                        title={'Self-Taught Web Development'}
+                                        institution={'Independent Learning'}
+                                        description={'Started learning web development in 2023, focusing on HTML, CSS, JavaScript, and later expanding to backend technologies and the MERN stack through self-directed projects and resources.'}
+                                    />
+                                    <Card
+                                        year={'2025 - Present'}
+                                        title={'Final Year Project (FYP): React Native App Development'}
+                                        institution={'COMSATS University Islamabad, Sahiwal Campus'}
+                                        description={'Currently working on my final year project, focusing on React Native app development. The project involves building cross-platform mobile applications with a focus on performance, user experience, and seamless integration with back-end services.'}
+                                    />
+
                                 </div>
                             </div>
                         </div>
@@ -42,7 +84,7 @@ const Resume = () => {
 export default Resume
 
 
-const Card = ({ year, title, institution }) => {
+const Card = ({ year, title, institution, description }) => {
     return (
         <SlideUp>
             <div className="resume-item">
@@ -53,6 +95,8 @@ const Card = ({ year, title, institution }) => {
                     <span className="years">{year}</span>
                     <h4>{title}</h4>
                     <span className="company"> {institution} </span>
+                    <br />
+                    <span className="description"> {description} </span>
                 </div>
             </div>
         </SlideUp>
