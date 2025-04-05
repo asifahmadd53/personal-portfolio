@@ -66,7 +66,9 @@ const Preloader = () => {
               style={{
                 fontSize: "1.9vw", // Increased text size
                 fontWeight: "500", // Bold text for prominence
-                color: "#fff", // White text color for contrast (can be changed)
+                color: "#fff", 
+                display: "inline-block",
+                whiteSpace: "nowrap"
               }}
             >
               {char}
