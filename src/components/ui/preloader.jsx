@@ -64,7 +64,7 @@ const Preloader = () => {
               animate={{ opacity: 1, y: 0 }}  // Just fade in without bouncing
               transition={{ delay: index * 0.08, duration: 0.6 }}
               style={{
-                fontSize: "clamp(1.4rem, 5vw, 1.9rem)", // Increased text size
+                fontSize: "clamp(1.4rem, 4vw, 1.9rem)", // Increased text size
                 fontWeight: "300", // Bold text for prominence
                 color: "#fff", 
                 display: "inline-block",
