@@ -23,7 +23,7 @@ const Hero = () => {
                 <div className="row">
                     {/* START ABOUT IMAGE DESIGN AREA */}
                     <div className="col-lg-4">
-                        <SlideUp>
+                        
                             <div className="about-image-part">
                                 <img src={isDarkMode ? profileDark : profileLight} alt="About Me" />
                                 <h2>Muhammad Asif</h2>
@@ -48,12 +48,12 @@ const Hero = () => {
                                     </ul>
                                 </div>
                             </div>
-                        </SlideUp>
+                        
                     </div>
 
                     {/* START ABOUT TEXT DESIGN AREA */}
                     <div className="col-lg-8">
-                        <SlideUp>
+
                             <div className="about-content-part">
                                 <p>Hello There!</p>
                                 <h2>
@@ -79,8 +79,7 @@ const Hero = () => {
 
 
                             </div>
-                        </SlideUp>
-
+                     
                         <SlideUp>
                             <div className="about-content-part-bottom">
                                 <div className="company-list">
