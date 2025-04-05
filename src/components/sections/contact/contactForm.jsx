@@ -23,38 +23,38 @@ const ContactForm = () => {
       [name]: value,
     }));
   };
-
   const sendEmail = async (event) => {
     event.preventDefault();
-
+  
     setLoading(true);
     setError('');
     setSuccess(false);
-
+  
     const formDataObj = new FormData(event.target);
     formDataObj.append('access_key', '16e4054a-debf-4da6-89a6-5cbccc0413fe');
-
+  
     const promise = fetch('https://api.web3forms.com/submit', {
       method: 'POST',
       body: formDataObj,
     }).then((res) => res.json());
-
+  
     toast.promise(promise, {
       loading: 'Sending your message...',
       success: (data) => {
         setSuccess(true);
         setFormData({ user_name: '', user_email: '', message: '' }); // Reset form after success
-        return `${data.message || 'Your message has been sent successfully!'}`;
+        // Custom message instead of Web3Form's default message
+        return 'Thank you for reaching out! I’ll get back to you as soon as possible.';
       },
       error: (err) => {
         setError(err.message);
         return 'There was an error sending your message. Please try again.';
       },
     });
-
+  
     setLoading(false);
   };
-
+  
   return (
     <div className="col-lg-8">
       <SlideUp>
