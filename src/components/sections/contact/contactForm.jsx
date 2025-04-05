@@ -1,32 +1,58 @@
-import React, { useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import { RiMailLine } from '@remixicon/react';
 import SlideUp from '../../../utlits/animations/slideUp';
-import emailjs from '@emailjs/browser';
-import { ToastContainer, toast, Bounce } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { Toaster, toast } from 'sonner'; // Import Sonner
 
 const ContactForm = () => {
+  const [formData, setFormData] = useState({
+    user_name: '',
+    user_email: '',
+    message: '',
+  });
+
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState('');
+
   const form = useRef();
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
 
-    toast.promise(
-      emailjs.sendForm(
-        'service_sru8bdd',
-        'template_pc3267h',
-        form.current,
-        { publicKey: 'PRHpEpA3oOy56GdXC' }
-      ),
-      {
-        pending: 'Sending message...',
-        success: 'Message sent successfully!',
-        error: 'Something went wrong.',
-      }
-    );
+  const sendEmail = async (event) => {
+    event.preventDefault();
 
+    setLoading(true);
+    setError('');
+    setSuccess(false);
 
-    e.target.reset();
+    const formDataObj = new FormData(event.target);
+    formDataObj.append('access_key', '16e4054a-debf-4da6-89a6-5cbccc0413fe');
+
+    const promise = fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: formDataObj,
+    }).then((res) => res.json());
+
+    toast.promise(promise, {
+      loading: 'Sending your message...',
+      success: (data) => {
+        setSuccess(true);
+        setFormData({ user_name: '', user_email: '', message: '' }); // Reset form after success
+        return `${data.message || 'Your message has been sent successfully!'}`;
+      },
+      error: (err) => {
+        setError(err.message);
+        return 'There was an error sending your message. Please try again.';
+      },
+    });
+
+    setLoading(false);
   };
 
   return (
@@ -42,6 +68,8 @@ const ContactForm = () => {
                     type="text"
                     id="name"
                     name="user_name"
+                    value={formData.user_name}
+                    onChange={handleInputChange}
                     className="form-control"
                     placeholder="Zain"
                     required
@@ -57,6 +85,8 @@ const ContactForm = () => {
                     type="email"
                     id="email"
                     name="user_email"
+                    value={formData.user_email}
+                    onChange={handleInputChange}
                     className="form-control"
                     placeholder="zain@websitename.com"
                     required
@@ -71,6 +101,8 @@ const ContactForm = () => {
                   <textarea
                     name="message"
                     id="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
                     className="form-control"
                     rows="4"
                     placeholder="Write your message"
@@ -81,8 +113,8 @@ const ContactForm = () => {
 
               <div className="col-md-12">
                 <div className="form-group mb-0">
-                  <button type="submit" className="theme-btn">
-                    Send Me Message <i><RiMailLine size={15} /></i>
+                  <button type="submit" className="theme-btn" disabled={loading}>
+                    {loading ? 'Sending...' : 'Send Me Message'} <i><RiMailLine size={15} /></i>
                   </button>
                 </div>
               </div>
@@ -91,18 +123,16 @@ const ContactForm = () => {
         </div>
       </SlideUp>
 
-      <ToastContainer
-        position="top-center"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick={false}
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="colored"
-        transition={Bounce}
+      {/* Sonner Toast */}
+      <Toaster 
+        position="top-center" 
+        toastOptions={{
+          style: {
+            padding: '16px',
+            borderRadius: '8px',
+          },
+          className: 'custom-toast',
+        }}
       />
     </div>
   );
