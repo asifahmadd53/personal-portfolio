@@ -86,7 +86,7 @@ const Hero = () => {
                                 <div className="company-list">
                                     <div className="scroller">
                                         <div className="scroller__inner">
-                                            <Marquee speed={100}>
+                                            <Marquee speed={80}>
                                                 <h4>Building impactful web and app experiences.</h4>
                                                 <h4>Specializing in MERN stack development.</h4>
                                                 <h4>Creating scalable and efficient solutions.</h4>
