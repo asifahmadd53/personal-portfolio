@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { RiShakeHandsLine } from '@remixicon/react';
@@ -55,11 +55,6 @@ const Header = () => {
                     <img src={isDarkMode ? darkLogo : lightLogo} alt="Logo" title="Logo" />
                     </Link>
                   </div>
-                  {/* <button type="button" className="navbar-toggle" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
-                    <span className="icon-bar"></span>
-                    <span className="icon-bar"></span>
-                    <span className="icon-bar"></span>
-                  </button> */}
                 </div>
                 <div className="navbar-collapse collapse">
                   <ul className="navigation onepage clearfix">

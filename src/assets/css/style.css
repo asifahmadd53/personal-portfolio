@@ -441,7 +441,6 @@ html {
 .theme-btn {
     background: var(--primary-color);
     color: #fff;
-    width: 8rem;
     cursor: pointer;
     display: inline-block;
     border: 1px solid var(--button-border);
@@ -460,11 +459,11 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* margin-left: 18px; */
-    width: 15rem;
     gap: 10px; /* space between button and toggle */
   }
-  
+  .menu-btns .theme-btn{
+    width: 8rem;
+  }
 
 .menu-btns a.theme-btn {
     background: transparent;
@@ -1111,8 +1110,19 @@ html {
     width: 26px;
     display: block;
     margin: 5px 0;
+  } 
+  .navbar-toggle {
+    background: transparent !important;
+    border: none;
+    box-shadow: none;
   }
-
+  
+  .navbar-toggle:focus,
+  .navbar-toggle:hover {
+    background: transparent !important;
+    outline: none;
+    box-shadow: none;
+  }
 
 
 
