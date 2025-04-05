@@ -71,7 +71,17 @@ Version      : 1.0
     border: none;
     outline: none;
     box-shadow: none;
+    box-sizing: border-box;
 }
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
 
 body {
     color: var(--main-color);
