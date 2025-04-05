@@ -76,10 +76,7 @@ const Hero = () => {
                                         Download CV <i><RiDownloadLine size={16} /></i>
                                     </a>
                                 </div>
-
-
                             </div>
-                     
                         <SlideUp>
                             <div className="about-content-part-bottom">
                                 <div className="company-list">

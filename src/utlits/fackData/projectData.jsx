@@ -19,13 +19,13 @@ export const projectsData = [
         id: 2,
         src: abita,
         category: "React",
-        title: "React se bni hui hai ",
+        title: "React",
         link:"https://abita.vercel.app/"
     },
     {
         id: 3,
         src: hoobank,
-        category: ["React","Landing Page"],
+        category: ["React ","Landing Page"],
         title: "Brand Identity and Motion Design",
         link:"https://hoobank.vercel.app/"
     },
