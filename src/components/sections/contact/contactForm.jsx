@@ -43,7 +43,7 @@ const ContactForm = () => {
                     id="name"
                     name="user_name"
                     className="form-control"
-                    placeholder="Steve Milner"
+                    placeholder="Zain"
                     required
                   />
                   <span className="for-icon"><i className="far fa-user"></i></span>
@@ -58,7 +58,7 @@ const ContactForm = () => {
                     id="email"
                     name="user_email"
                     className="form-control"
-                    placeholder="hello@websitename.com"
+                    placeholder="zain@websitename.com"
                     required
                   />
                   <span className="for-icon"><i className="far fa-envelope"></i></span>

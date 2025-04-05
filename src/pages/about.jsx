@@ -9,7 +9,7 @@ const About = () => {
             <Summery />
             <Resume />
             <Skills/>
-            <Testimonials />
+            {/* <Testimonials /> */}
         </>
     )
 }

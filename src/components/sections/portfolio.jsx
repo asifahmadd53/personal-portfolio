@@ -56,7 +56,8 @@ const filteredProjects = category === 'All'
                             <SlideUp>
                                 <div className="section-title text-center">
                                     <h2>Works & Projects</h2>
-                                    <p>Explore my collection of full-stack projects, built with modern web technologies like React, Node.js, and MongoDB. Each project demonstrates my focus on responsive design, functionality, and clean user experience.</p>
+                                    <p>Explore my portfolio of full-stack projects, built with React, Node.js, and MongoDB, showcasing responsive design, functionality, and a seamless user experience.</p>
+
 
                                 </div>
                             </SlideUp>
