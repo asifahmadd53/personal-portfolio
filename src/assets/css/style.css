@@ -72,6 +72,7 @@ Version      : 1.0
     outline: none;
     box-shadow: none;
     box-sizing: border-box;
+    width: 100%;
 }
 
 
@@ -83,7 +84,7 @@ Version      : 1.0
 
 
 
-body {
+html, body {
     color: var(--main-color);
     background: var(--body-background);
     font-weight: 400;
