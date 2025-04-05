@@ -55,11 +55,11 @@ const Header = () => {
                     <img src={isDarkMode ? darkLogo : lightLogo} alt="Logo" title="Logo" />
                     </Link>
                   </div>
-                  <button type="button" className="navbar-toggle" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
+                  {/* <button type="button" className="navbar-toggle" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
                     <span className="icon-bar"></span>
                     <span className="icon-bar"></span>
                     <span className="icon-bar"></span>
-                  </button>
+                  </button> */}
                 </div>
                 <div className="navbar-collapse collapse">
                   <ul className="navigation onepage clearfix">
@@ -73,15 +73,31 @@ const Header = () => {
               </nav>
             </div>
             <div className="menu-btns d-flex align-items-center gap-3">
-              <Link to="/contact" className="theme-btn">
-                Hire Me <RiShakeHandsLine size={15} />
-              </Link>
-              <DarkModeSwitch
-                checked={isDarkMode}
-                onChange={() => dispatch(toggleDarkMode())}
-                size={24}
-              />
-            </div>
+                
+  <DarkModeSwitch
+    className="swtich"
+    checked={isDarkMode}
+    onChange={() => dispatch(toggleDarkMode())}
+    size={25}
+  />
+  <Link to="/contact" className="theme-btn">
+    Hire Me <RiShakeHandsLine size={15} />
+  </Link>
+
+
+  {/* ✅ Hamburger menu placed here for small screens only */}
+  <button
+    type="button"
+    className="navbar-toggle d-block d-lg-none"
+    data-bs-toggle="collapse"
+    data-bs-target=".navbar-collapse"
+  >
+    <span className="icon-bar"></span>
+    <span className="icon-bar"></span>
+    <span className="icon-bar"></span>
+  </button>
+</div>
+
           </div>
         </div>
       </div>

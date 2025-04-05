@@ -39,7 +39,9 @@ Version      : 1.0
     .about-social {
         margin-bottom: 30px;
     }
-
+    .navbar-toggle {
+        display: block ;
+      }
     .call-to-action-part {
         padding: 50px;
     }

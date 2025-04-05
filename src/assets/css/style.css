@@ -441,6 +441,7 @@ html {
 .theme-btn {
     background: var(--primary-color);
     color: #fff;
+    width: 8rem;
     cursor: pointer;
     display: inline-block;
     border: 1px solid var(--button-border);
@@ -459,8 +460,9 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+    /* margin-left: 18px; */
+    width: 15rem;
     gap: 10px; /* space between button and toggle */
-    flex-wrap: wrap; /* optional: makes it responsive on small screens */
   }
   
 
@@ -481,7 +483,7 @@ html {
 }
 
 .theme-btn i {
-    margin-left: 4px;
+    margin-left: 2px;
 }
 
 .theme-btn:hover {
@@ -1093,6 +1095,7 @@ html {
     padding: 4px 0;
     cursor: pointer;
     background: transparent;
+    border: none;
 }
 
 .main-menu .navbar-header .navbar-toggle .icon-bar {
@@ -1102,7 +1105,13 @@ html {
     display: block;
     margin: 5px 0;
 }
-
+  .navbar-toggle .icon-bar {
+    background: var(--main-color);
+    height: 3px;
+    width: 26px;
+    display: block;
+    margin: 5px 0;
+  }
 
 
 
