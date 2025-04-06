@@ -845,9 +845,11 @@ Version      : 1.0
 @media only screen and (max-width: 991px) {
     .main-menu .navbar-collapse>ul {
         display: block;
-        padding: 25px 0;
+        padding: 30px 0;
+        margin-top: 13px;
         overflow-x: hidden;
         background: #333;
+        border-radius: 1rem;
         max-height: calc(100vh - 100px);
     }
 

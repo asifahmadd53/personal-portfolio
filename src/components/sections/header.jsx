@@ -37,6 +37,24 @@ const Header = () => {
     }
   }, [isDarkMode]);
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      const toggleButton = document.querySelector('.navbar-toggle');
+
+      if (
+        navbarCollapse &&
+        !navbarCollapse.contains(event.target) &&
+        !toggleButton.contains(event.target)
+      ) {
+        navbarCollapse.classList.remove('show');
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
+  }, []);
+
   return (
     <header className={`main-header ${isSticky ? 'fixed-header' : ''}`}>
       <div className="header-upper">
@@ -69,18 +87,14 @@ const Header = () => {
                         Hire Me <RiShakeHandsLine size={15} />
                       </Link>
                     </li>
-
                   </ul>
                 </div>
               </nav>
             </div>
             <div className="menu-btns d-flex align-items-center gap-3">
-
-
-            <Link to="/contact" className="theme-btn d-none d-lg-block">
-  Hire Me <RiShakeHandsLine size={15} />
-</Link>
-
+              <Link to="/contact" className="theme-btn d-none d-lg-block">
+                Hire Me <RiShakeHandsLine size={15} />
+              </Link>
 
               <DarkModeSwitch
                 className="swtich"
