@@ -1108,6 +1108,7 @@ html {
     cursor: pointer;
     background: transparent;
     border: none;
+
 }
 
 .main-menu .navbar-header .navbar-toggle .icon-bar {
@@ -1128,6 +1129,7 @@ html {
     background: transparent !important;
     border: none;
     box-shadow: none;
+    margin-right: 8px;
   }
   
   .navbar-toggle:focus,
