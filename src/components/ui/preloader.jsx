@@ -65,7 +65,7 @@ const Preloader = () => {
               transition={{ delay: index * 0.08, duration: 0.6 }}
               style={{
                 fontSize: "clamp(.9rem, 2vw, 1.9rem)", // Increased text size
-                fontWeight: "300", // Bold text for prominence
+                fontWeight: "200", // Bold text for prominence
                 color: "#fff", 
                 display: "inline-block",
                 whiteSpace: "nowrap",
