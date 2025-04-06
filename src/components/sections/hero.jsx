@@ -57,7 +57,7 @@ const Hero = () => {
                             <div className="about-content-part">
                                 <p>Hello There!</p>
                                 <h2>
-                                    I’m<span>Muhammad Asif</span>, a Web and App Developer specializing in<span>MERN stack</span>, building scalable solutions.
+                                    I’m<span>Muhammad Asif,</span>a Web and App Developer specializing in<span>MERN stack,</span>building scalable solutions.
                                 </h2>
                                 <div className="adress-field">
                                     <ul>
