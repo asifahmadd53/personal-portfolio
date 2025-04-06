@@ -69,7 +69,7 @@ const Preloader = () => {
                 color: "#fff", 
                 display: "inline-block",
                 whiteSpace: "nowrap",
-                marginRight: index !== 0 && char !== " " ? "0.9rem" : "0",
+                marginRight: index !== 0 && char !== " " ? "0.5rem" : "0",
               }}
             >
               {char}
