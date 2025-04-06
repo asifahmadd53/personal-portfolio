@@ -81,10 +81,7 @@ Version      : 1.0
   box-sizing: border-box;
 }
 
-.custom-toast {
-    max-width: 300px;
-    margin: auto; /* Adjust to your desired width */
-  }
+
 
 html,body {
     color: var(--main-color);

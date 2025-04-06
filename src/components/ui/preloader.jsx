@@ -64,12 +64,12 @@ const Preloader = () => {
               animate={{ opacity: 1, y: 0 }}  // Just fade in without bouncing
               transition={{ delay: index * 0.08, duration: 0.6 }}
               style={{
-                fontSize: "clamp(.9rem, 2vw, 1.9rem)", // Increased text size
+                fontSize: "clamp(.9rem, 2vw, 1.4rem)", // Increased text size
                 fontWeight: "200", // Bold text for prominence
                 color: "#fff", 
                 display: "inline-block",
                 whiteSpace: "nowrap",
-                marginRight: index !== 0 && char !== " " ? "0.5rem" : "0",
+                marginRight: index !== 0 && char !== " " ? "0.9rem" : "0",
               }}
             >
               {char}
