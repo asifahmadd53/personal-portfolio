@@ -1,4 +1,3 @@
-
 import singleProjectImg from "../assets/images/projects/single-project.jpg"
 import singleProject1 from "../assets/images/projects/single-project1.jpg"
 import singleProject2 from "../assets/images/projects/single-project2.jpg"
