@@ -1,8 +1,9 @@
-import profile from "../../assets/images/about/downorange.png"
-import profile2 from "../../assets/images/about/downgreen.png"
+
 import { RiMailSendLine } from '@remixicon/react'
 import SlideUp from '../../utlits/animations/slideUp'
 import { useSelector } from "react-redux"
+import profileDark from "../../assets/images/about/downorange.jpeg";
+import profileLight from "../../assets/images/about/downgreen.jpeg";
 const Summery = () => {
 
     const isDarkMode = useSelector((state) => state.darkMode.mode);
@@ -15,7 +16,7 @@ const Summery = () => {
                     <div className="col-lg-4">
                         <SlideUp>
                             <div className="about-image-part">
-                                <img src={isDarkMode ? profile : profile2} alt="About Me" />
+                                <img src={isDarkMode ? profileDark : profileLight} alt="About Me" />
                             </div>
                         </SlideUp>
                     </div>

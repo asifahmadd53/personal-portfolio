@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Marquee from "react-fast-marquee";
 import {
@@ -7,8 +6,8 @@ import {
     RiCircleFill,
     RiDownloadLine,
 } from '@remixicon/react';
-import profileDark from "../../assets/images/about/downorange.png";
-import profileLight from "../../assets/images/about/downgreen.png";
+import profileDark from "../../assets/images/about/downorange.jpeg";
+import profileLight from "../../assets/images/about/downgreen.jpeg";
 import SlideUp from '../../utlits/animations/slideUp';
 import { LuMail } from "react-icons/lu";
 import { useSelector } from 'react-redux';
@@ -23,9 +22,11 @@ const Hero = () => {
                 <div className="row">
                     {/* START ABOUT IMAGE DESIGN AREA */}
                     <div className="col-lg-4">
-                        
+
                             <div className="about-image-part">
+                                
                                 <img src={isDarkMode ? profileDark : profileLight} alt="About Me" />
+                                
                                 <h2>Muhammad Asif</h2>
                                 <p>I am a Web and App Developer.</p>
                                 <div className="about-social text-center">
